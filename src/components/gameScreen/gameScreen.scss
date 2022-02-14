@@ -1,0 +1,112 @@
+@import "../../styles/variables.scss";
+
+.gamescreen {
+  width: 100%;
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: $font-size-normal;
+  }
+
+  .timer {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-heading;
+    color: $font-color-heading;
+  }
+
+  fieldset {
+    margin: $spacing-4 0;
+
+    legend {
+      font-size: $font-size-large;
+      font-weight: $font-weight-heading;
+      color: $font-color-heading;
+    }
+
+    .helper-text {
+      margin-top: $spacing-2;
+    }
+
+    .gamescreen__choices {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $spacing-4;
+      margin-top: $spacing-4;
+
+      @media (min-width: $breakpoint-sm) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      label {
+        display: block;
+        box-sizing: border-box;
+
+        input {
+          @include visually-hidden;
+        }
+
+        span {
+          display: block;
+          padding: $spacing-3 $spacing-4;
+          border-radius: $button-radius;
+          background: $button-reverse-background;
+          color: $button-reverse-color;
+          font-weight: $button-font-weight;
+          border: 1px solid $neutral-600;
+          text-align: center;
+        }
+
+        &:hover span {
+          background: $button-reverse-hover;
+          cursor: pointer;
+        }
+
+        & input:checked ~ span {
+          background: $neutral-600;
+          color: $white;
+        }
+
+        & input:focus ~ span {
+          box-shadow: $focus-shadow;
+        }
+
+        &:hover input:disabled ~ span {
+          cursor: default;
+          background: $white;
+        }
+
+        &.correct input:disabled ~ span {
+          background: $green-600;
+          color: $white;
+        }
+
+        &.wrong input:disabled ~ span {
+          background: $red-600;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .status {
+    margin-bottom: $spacing-4;
+    font-weight: $font-weight-heading;
+    text-align: center;
+
+    &--correct {
+      color: $green-600;
+    }
+
+    &--wrong {
+      color: $red-600;
+    }
+  }
+
+  .button-wrapper {
+    text-align: center;
+  }
+}

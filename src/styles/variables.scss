@@ -1,0 +1,67 @@
+//BREAKPOINT
+$breakpoint-sm: 600px;
+
+//COLOR
+$white: #fff;
+$neutral-300: #cccccc;
+$neutral-600: #595959;
+$neutral-900: #2d2d2d;
+$black: #000;
+$blue-600: #2c69d1;
+$blue-900: #2a2a72;
+$red-600: #a71d31;
+$red-900: #3f0d12;
+$green-600: #63d471;
+$green-900: #233329;
+
+//SPACING
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-6: 2rem;
+
+//BORDER-RADIUS
+$radius-1: $spacing-1;
+$radius-2: $spacing-2;
+
+//FONT
+$font-family: "Roboto", sans-serif;
+$font-color-base: $neutral-600;
+$font-weight-base: 300;
+$font-color-heading: $neutral-900;
+$font-weight-heading: 500;
+
+$font-size-small: 0.75rem;
+$font-size-normal: 1rem;
+$font-size-medium: 1.25rem;
+$font-size-large: 1.5rem;
+
+//BUTTON
+$button-color: $white;
+$button-background: $blue-600;
+$button-hover: $blue-900;
+$button-disabled: $neutral-300;
+$button-radius: $radius-1;
+$button-font-weight: $font-weight-heading;
+$button-font-size: 1rem;
+
+$button-reverse-color: $button-background;
+$button-reverse-background: $white;
+$button-reverse-hover: $neutral-300;
+
+//FOCUS
+$focus-shadow: 0 0 0 0.125rem $white, 0 0 0 0.1875rem $button-background;
+
+//GAME
+$game-background: #0093e9;
+$game-gradient: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+
+@mixin visually-hidden {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.introscreen {
+  text-align: center;
+
+  h1 {
+    margin-bottom: $spacing-4;
+  }
+
+  button {
+    margin-top: $spacing-6;
+  }
+}

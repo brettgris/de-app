@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-weight: $font-weight-base;
+  color: $font-color-base;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: $font-size-normal;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: $font-weight-heading;
+  color: $font-color-heading;
+  font-size: $font-size-large;
+}
+
+button.styled {
+  background: $button-background;
+  border: 0;
+  color: $button-color;
+  padding: $spacing-3 $spacing-4;
+  border-radius: $button-radius;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+
+  &:hover {
+    background: $button-hover;
+    cursor: pointer;
+  }
+
+  &:focus {
+    box-shadow: $focus-shadow;
+    outline: none;
+  }
+
+  &:disabled {
+    background: $button-disabled;
+    cursor: default;
+  }
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
